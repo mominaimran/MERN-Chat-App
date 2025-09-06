@@ -5,8 +5,7 @@ import { io } from "socket.io-client";
 
 const BASE_URL = import.meta.env.MODE === "development"
   ? import.meta.env.VITE_BACKEND_URL
-  : import.meta.env.VITE_BACKEND_URL;
-
+  : "https://mern-chat-app-production-f2c9.up.railway.app"; 
 
 export const useAuthStore = create((set, get) => ({
   authUser: null,
@@ -90,6 +89,7 @@ export const useAuthStore = create((set, get) => ({
     const socket = io(BASE_URL, {
       query: {
         userId: authUser._id,
+        withCredentials: true
       },
     });
     socket.connect();
