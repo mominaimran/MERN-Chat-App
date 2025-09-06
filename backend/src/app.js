@@ -15,10 +15,7 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
 app.use(cookieParser());
 
-const allowedOrigins = [
-  "http://localhost:5173", // local dev
-  process.env.CLIENT_URL, // deployed frontend
-];
+const allowedOrigins = ["http://localhost:5173", process.env.CLIENT_URL];
 
 app.use(
   cors({
@@ -26,6 +23,7 @@ app.use(
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
+        console.log("Blocked by CORS:", origin); // debug log
         callback(new Error("Not allowed by CORS"));
       }
     },
@@ -40,7 +38,7 @@ app.use("/api/message", messageRoutes);
 app.get("/health", (req, res) => {
   res.status(200).json({
     status: "OK",
-    message: "Backend is running 🚀"
+    message: "Backend is running 🚀",
   });
 });
 
