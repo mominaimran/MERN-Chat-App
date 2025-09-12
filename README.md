@@ -1,7 +1,7 @@
 # 💬 MERN Chat App  
 A real-time and modern **MERN Stack Chat Application** with seamless messaging, user authentication, and live updates powered by **Socket.io**.  
 
-🚀 **Live Demo:** [MERN Chat App](https://mern-chat-app-nine-silk.vercel.app/)
+🚀 **Live Demo:** [MERN Chat App](https://mern-chat-app-nine-silk.vercel.app/)   
 💻 **Backend API:** [Railway Deployment](https://mern-chat-app-production-f2c9.up.railway.app)  
 (⚠️ Note: This is a REST + WebSocket API, so opening the link directly may not show UI. Try endpoints like `/health`.)  
 
@@ -9,9 +9,9 @@ A real-time and modern **MERN Stack Chat Application** with seamless messaging, 
 
 ## ✨ Features  
 - 🔐 **User Authentication** (JWT + Cookies)  
-- 👥 **1-to-1 & Group Chats**  
+- 👥 **1-to-1 Chats**  
 - ⚡ **Real-Time Messaging with Socket.io**  
-- 📤 **Send Text, Emojis, Media**  
+- 📤 **Send Text, Media**  
 - 📅 **Chat History & Timestamps**  
 - 📊 **Online/Offline User Status**  
 - 🎨 **Clean & Responsive UI (React + Tailwind)**  
